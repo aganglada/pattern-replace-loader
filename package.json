@@ -1,0 +1,25 @@
+{
+  "name": "pattern-replace-loader",
+  "version": "1.0.0",
+  "description": "pattern replace loader for webpack 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aganglada/pattern-replace-loader.git"
+  },
+  "keywords": [
+    "pattern",
+    "replace",
+    "string",
+    "webpack"
+  ],
+  "author": "Alejandro Garcia Anglada (aganglada@gmail.com>)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aganglada/pattern-replace-loader/issues"
+  },
+  "homepage": "https://github.com/aganglada/pattern-replace-loader#readme"
+}
