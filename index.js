@@ -17,7 +17,7 @@ module.exports = function (source) {
         this.cacheable();
     }
 
-    const options = utils.parseQuery(this.options);
+    const options = utils.parseQuery(this.query);
 
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {
