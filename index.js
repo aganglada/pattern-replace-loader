@@ -1,6 +1,6 @@
 const utils = require('loader-utils');
 
-function processQuery(source, options) {
+function performReplacement(source, options) {
     if (options.search !== undefined && options.replace !== undefined) {
         if (options.flags !== undefined) {
             options.search = new RegExp(options.search, options.flags);
@@ -21,10 +21,10 @@ module.exports = function (source) {
 
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {
-            source = processQuery(source, opt);
+            source = performReplacement(source, opt);
         });
     } else {
-        source = processQuery(source, options);
+        source = performReplacement(source, options);
     }
 
     return source;

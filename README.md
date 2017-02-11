@@ -1,9 +1,7 @@
 # pattern-replace-loader
 Pattern replace loader for [webpack](https://webpack.js.org/)
 
-# Replace loader for 
-
-Perform replacements (plain and regular expression) in the contents loaded by the loader.
+Perform plain string and regular expressions. 
 
 ## Install:
 
@@ -13,7 +11,9 @@ $ npm install --save-dev pattern-replace-loader
 
 ## Usage:
 
-In general, loader allows to perform replacements in a way [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) does (loader uses it internally). For instance, it means that if you want to replace all occurences, you should use RegExp in `options.search` with `g` flag in `options.flags`, etc.
+**Plain**: It uses [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) to perform replaces in file contents.
+
+**Regex**: It will go and look for all the occurrences of what you've specified  in `options.search` with `g` flag in `options.flags`, etc.
 
 ### Plain replacement:
 
@@ -28,7 +28,7 @@ module.exports = {
         test: /filename\.js$/,
         loader: 'pattern-replace-loader',
         options: {
-          search: '$variable',
+          search: '[variable]',
           replace: 'Hello'
         }
       }
@@ -37,7 +37,7 @@ module.exports = {
 }
 ```
 
-### RegEx replacement:
+### RegExp replacement:
 
 To achieve regular expression replacement you should specify the `flags` query param
 (as an empty string if you do not want any flags). In this case, `search` and `flags` are being
@@ -54,8 +54,9 @@ module.exports = {
         test: /filename\.js$/,
         loader: 'pattern-replace-loader',
         options: {
-          search: '$variable',
-          replace: 'Hello'
+          search: '[variable]',
+          replace: 'Hello',
+          flags: 'gi'
         }
       }
     ]
@@ -79,8 +80,8 @@ module.exports = {
         loader: 'pattern-replace-loader',
         query: {
           multiple: [
-             { search: '$variable1', replace: 'Hello' },
-             { search: '$variable2', replace: 'Bye!' }
+             { search: '[variable1]', replace: 'Hello' },
+             { search: '[variable2]', replace: 'Bye!' }
           ]
         }
       }
@@ -91,7 +92,9 @@ module.exports = {
 
 ## Contributing:
 
-Feel free to open issues to propose stuff and participate. Pull requests are also welcome.
+Feel free to open issues to propose stuff and participate. 
+
+Pull requests are also welcome.
 
 ## Licence:
 
