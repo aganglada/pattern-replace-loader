@@ -39,8 +39,7 @@ module.exports = {
 
 ### RegExp replacement:
 
-To achieve regular expression replacement you should specify the `flags` query param
-(as an empty string if you do not want any flags). In this case, `search` and `flags` are being
+To be able to use RegExp in yuor replacement you should specify `flags` in the options param. In this case, `search` and `flags` are being
 passed to the [RegExp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) constructor.
 
 In your `webpack.config.js`:
@@ -66,7 +65,7 @@ module.exports = {
 
 ### Multiple replacement:
 
-Also, you can pass an array of search-replace pairs this way:
+Also, you can pass an array of objects of search/replace pairs this way:
 
 In your `webpack.config.js`:
 
