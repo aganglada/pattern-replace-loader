@@ -1,4 +1,4 @@
-# pattern-replace-loader
+# 🔬 pattern-replace-loader
 Pattern replace loader for [webpack](https://webpack.js.org/)
 
 Perform plain string and regular expressions. 
