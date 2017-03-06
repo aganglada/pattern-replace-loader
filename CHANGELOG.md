@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.4
+
+#### Bugfixes
+
+Fixed error on getOptions returning null
+
 ## 1.0.3
 
 #### Features

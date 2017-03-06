@@ -19,7 +19,7 @@ module.exports = function (source) {
 
     const optionsConfig = this.options || this.query;
     const options = typeof optionsConfig === 'object' ?
-        utils.getOptions(optionsConfig) : utils.parseQuery(optionsConfig);
+        utils.getOptions(this) : utils.parseQuery(this.query);
 
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {

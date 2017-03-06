@@ -1,6 +1,6 @@
 {
   "name": "pattern-replace-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "pattern replace loader for webpack 2",
   "main": "index.js",
   "scripts": {
