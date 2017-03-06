@@ -17,6 +17,9 @@
     "webpack"
   ],
   "author": "Alejandro Garcia Anglada (aganglada@gmail.com>)",
+  "dependencies": {
+    "loader-utils": "^0.2.16"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/aganglada/pattern-replace-loader/issues"
