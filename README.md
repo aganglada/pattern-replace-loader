@@ -9,6 +9,12 @@ Perform plain string and regular expressions.
 $ npm install --save-dev pattern-replace-loader
 ```
 
+or using yarn
+
+```bash
+$ yarn add pattern-replace-loader --dev
+```
+
 ## Usage:
 
 **Plain**: It uses [String.prototype.replace()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) to perform replaces in file contents.
@@ -77,7 +83,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'pattern-replace-loader',
-        query: {
+        options: {
           multiple: [
              { search: '[variable1]', replace: 'Hello' },
              { search: '[variable2]', replace: 'Bye!' }

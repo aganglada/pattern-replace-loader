@@ -1,8 +1,8 @@
 const utils = require('loader-utils');
 
 function performReplacement(source, options) {
-    if (options.search !== undefined && options.replace !== undefined) {
-        if (options.flags !== undefined) {
+    if (options.search && options.replace) {
+        if (options.flags) {
             options.search = new RegExp(options.search, options.flags);
         }
 
@@ -17,7 +17,9 @@ module.exports = function (source) {
         this.cacheable();
     }
 
-    const options = utils.parseQuery(this.query);
+    const optionsConfig = this.options || this.query;
+    const options = typeof optionsConfig === 'object' ?
+        utils.getOptions(optionsConfig) : utils.parseQuery(optionsConfig);
 
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {
