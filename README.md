@@ -6,14 +6,9 @@ Perform plain string and regular expressions.
 ## Install:
 
 ```bash
-$ npm install --save-dev pattern-replace-loader
+$ npm install --save-dev improved-pattern-replace-loader
 ```
 
-or using yarn
-
-```bash
-$ yarn add pattern-replace-loader --dev
-```
 
 ## Usage:
 
@@ -32,7 +27,7 @@ module.exports = {
     rules: [
       {
         test: /filename\.js$/,
-        loader: 'pattern-replace-loader',
+        loader: 'improved-pattern-replace-loader',
         options: {
           search: '[variable]',
           replace: 'Hello'
@@ -57,7 +52,7 @@ module.exports = {
     rules: [
       {
         test: /filename\.js$/,
-        loader: 'pattern-replace-loader',
+        loader: 'improved-pattern-replace-loader',
         options: {
           search: '[variable]',
           replace: 'Hello',
@@ -82,7 +77,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'pattern-replace-loader',
+        loader: 'improved-pattern-replace-loader',
         options: {
           multiple: [
              { search: '[variable1]', replace: 'Hello' },
