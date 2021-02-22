@@ -23,6 +23,11 @@ module.exports = function (source) {
     const options = typeof optionsConfig === 'object' ?
         utils.getOptions(this) : utils.parseQuery(this.query);
 
+    if(options !== "undefined" && options !== null){
+        if(options.verbose == true) {
+            console.log("Replacing in file:", this.resourcePath);
+        }
+    }
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {
             source = performReplacement(source, opt);
