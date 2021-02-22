@@ -1,7 +1,9 @@
 const utils = require('loader-utils');
 
 function performReplacement(source, options) {
-    if (options.search && options.replace) {
+    let searchDefined = (typeof options.search !== "undefined") && (options.search !== null);
+    let replaceDefined = (typeof options.replace !== "undefined") && (options.replace !== null);
+    if (searchDefined && replaceDefined) {
         if (options.flags) {
             options.search = new RegExp(options.search, options.flags);
         }
