@@ -25,7 +25,7 @@ module.exports = function (source) {
 
     if(options !== "undefined" && options !== null){
         if(options.verbose == true) {
-            console.log("Replacing in file:", this.resourcePath);
+            console.log("\nReplacing in file:", this.resourcePath);
         }
     }
     if (Array.isArray(options.multiple)) {
