@@ -1,8 +1,8 @@
 const utils = require('loader-utils');
 
 function performReplacement(source, options) {
-    let searchDefined = (typeof options.search !== "undefined") && (options.search !== null);
-    let replaceDefined = (typeof options.replace !== "undefined") && (options.replace !== null);
+    let searchDefined = (typeof options.search !== 'undefined') && (options.search !== null);
+    let replaceDefined = (typeof options.replace !== 'undefined') && (options.replace !== null);
     if (searchDefined && replaceDefined) {
         if (options.flags) {
             options.search = new RegExp(options.search, options.flags);
@@ -23,11 +23,12 @@ module.exports = function (source) {
     const options = typeof optionsConfig === 'object' ?
         utils.getOptions(this) : utils.parseQuery(this.query);
 
-    if(options !== "undefined" && options !== null){
+    if(options !== 'undefined' && options !== null){
         if(options.verbose == true) {
-            console.log("\nReplacing in file:", this.resourcePath);
+            console.log('\nReplacing in file:', this.resourcePath);
         }
     }
+
     if (Array.isArray(options.multiple)) {
         options.multiple.forEach(function (opt) {
             source = performReplacement(source, opt);
