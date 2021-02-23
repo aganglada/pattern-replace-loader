@@ -25,7 +25,5 @@
   "dependencies": {
     "loader-utils": "^1.0.2"
   },
-  "devDependencies": {
-    "eslint": "^7.20.0"
-  }
+  "devDependencies": {}
 }
