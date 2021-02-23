@@ -1,7 +1,7 @@
 {
   "name": "pattern-replace-loader",
   "version": "1.0.5",
-  "description": "pattern replace loader for webpack 2",
+  "description": "pattern replace loader for webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
