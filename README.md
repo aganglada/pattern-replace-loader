@@ -98,6 +98,29 @@ module.exports = {
 }
 ```
 
+### Verbose output:
+You can enable verbose output to check which files have been processed by the replace loader.
+In your `webpack.config.js`:
+
+```javascript
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /filename\.js$/,
+        loader: 'pattern-replace-loader',
+        options: {
+          verbose: true,
+          search: '[variable]',
+          replace: 'Hello'
+        }
+      }
+    ]
+  }
+}
+```
+
 ## Contributing:
 
 Feel free to open issues to propose stuff and participate. 
